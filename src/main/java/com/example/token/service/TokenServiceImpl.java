@@ -16,7 +16,7 @@ public class TokenServiceImpl implements TokenServicePort {
     }
 
     @Override
-    public TokenDto getTokenByUserPassword(String user, String password) throws URISyntaxException, IOException {
-        return tokenPersistencePort.getTokenByUserPassword(user, password);
+    public TokenDto getTokenByUserPassword(String user, String password, String urlToken) throws URISyntaxException, IOException {
+        return tokenPersistencePort.getTokenByUserPassword(user, password, urlToken);
     }
 }

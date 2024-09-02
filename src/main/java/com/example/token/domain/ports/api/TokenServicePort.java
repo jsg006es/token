@@ -7,5 +7,5 @@ import java.net.URISyntaxException;
 
 public interface TokenServicePort {
 
-    TokenDto getTokenByUserPassword(String user, String password) throws URISyntaxException, IOException;
+    TokenDto getTokenByUserPassword(String user, String password, String urlToken) throws URISyntaxException, IOException;
 }

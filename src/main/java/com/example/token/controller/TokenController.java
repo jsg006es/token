@@ -22,7 +22,8 @@ public class TokenController {
 
     @GetMapping("/get-token")
     public TokenDto getTokenByUserPassword() throws URISyntaxException, IOException {
-        return tokenServicePort.getTokenByUserPassword(tokenProperties.getUsernameToken(), tokenProperties.getPassword());
+        return tokenServicePort.getTokenByUserPassword(tokenProperties.getUsernameToken(),
+                tokenProperties.getPassword(), tokenProperties.getUrlToken());
     }
 
 }

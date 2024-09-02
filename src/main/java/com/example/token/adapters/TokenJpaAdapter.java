@@ -21,9 +21,9 @@ import java.time.format.DateTimeFormatter;
 public class TokenJpaAdapter implements TokenPersistencePort {
 
     @Override
-    public TokenDto getTokenByUserPassword(String user, String password) throws URISyntaxException, IOException {
+    public TokenDto getTokenByUserPassword(String user, String password, String urlToken) throws URISyntaxException, IOException {
         final String responseToken;
-        HttpPost httpPost = new HttpPost("http://localhost:8080/token");
+        HttpPost httpPost = new HttpPost(urlToken);
         String body = "{ " +
                 " \"username\":\"auth-vivelibre\"," +
                 " \"password\":\"password\"" +

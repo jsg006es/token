@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  container_token:
+    image: skeet15/auth-vivelibre
+    restart: always
+    ports:
+      - "8080:8080"
+    hostname: localtoken
+
+  container_pruebatoken:
+    image: jasanzg/token-0.0.2
+    restart: always
+    ports:
+      - "8081:8081"
+    depends_on:
+      - container_token

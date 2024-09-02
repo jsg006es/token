@@ -10,8 +10,7 @@ import org.springframework.validation.annotation.Validated;
 @Validated
 @Data
 public class TokenProperties {
-
     private String usernameToken;
-
     private String password;
+    private String urlToken;
 }
